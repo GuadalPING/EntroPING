@@ -1,7 +1,7 @@
 # Project title
 Entroping
 # Getting Started
-<script id="asciicast-lVa84GkAd4KnfcjKkUTvvNOTX" src="https://asciinema.org/a/lVa84GkAd4KnfcjKkUTvvNOTX.js" async></script>
+<a href="https://asciinema.org/a/lVa84GkAd4KnfcjKkUTvvNOTX" target="_blank"><img src="https://asciinema.org/a/lVa84GkAd4KnfcjKkUTvvNOTX.svg" /></a>
 # How to
 ``` python3 entroping.py ```
 # Thanks to

@@ -1,5 +1,18 @@
 import math  # import math
 
+__author__ = "Eduardo"
+__copyright__ = "Copyright 2019, Guadalpin"
+__credits__ = ["Ismael Joyera Aguilar", "Diego Gamaza", "Alejandro Santamaría"]
+__license__ = "GNU/GPLv3"
+__version__ = "1.0.0"
+__email__ = "bach1.eduardo@gmail.com"
+
+class colours:  # for printing colored text in terminal
+    def __init__(self):
+        self.red = "\033[1;31m"
+        self.yellow = "\033[93m"
+        self.end = "\033[0m"
+
 class TextInfo:  # class Text info
 
 	def __init__(self, userfile):  # constructor
@@ -8,7 +21,7 @@ class TextInfo:  # class Text info
 		self.length = 0  # length of string
 		self.entropy = 0  # entropy
 		self.file = userfile  # file pwd
-		
+
 	def getTextLen(self):  # first method, get text from file and length
 		with open(self.file, "r") as e:
 			self.text = e.readlines()
@@ -26,11 +39,13 @@ class TextInfo:  # class Text info
 		for i in self.a:  # for char in string
 			prob = self.a[i] / (self.length)  # prob
 			I = math.log((1/prob), 2)  # get I
-			self.entropy += prob*I  #
+			self.entropy += prob*I
 			yield "probabilidad de {0} es {1:.4f}, I: {2:.4f}".format(i,prob, I)  # for each iteration return prob and I
-		yield "Entropía: {:.4f}".format(self.entropy)  # when bucle ends ( all chars ), returns entropy
+		yield colourful.yellow + "Entropía: {:.4f}".format(self.entropy) + colourful.end # when bucle ends ( all chars ), returns entropy
 
 if __name__ == "__main__":  # execute all methods
+	colourful = colours()
+	print(colourful.red + "Guadalping Tools" + colourful.end)
 	files = input("Ruta del archivo (solo nombre si es la misma ruta): ")
 	getTextInfo = TextInfo(files)
 	getTextInfo.getTextLen()

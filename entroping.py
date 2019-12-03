@@ -1,7 +1,7 @@
 import math  # import math
 
 __author__ = "Eduardo"
-__copyright__ = "Copyright 2019, Guadalpin"
+__copyright__ = "Copyright 2019, GuadalPING SL"
 __credits__ = ["Ismael Joyera Aguilar", "Diego Gamaza", "Alejandro Santamaría"]
 __license__ = "GNU/GPLv3"
 __version__ = "1.0.0"
